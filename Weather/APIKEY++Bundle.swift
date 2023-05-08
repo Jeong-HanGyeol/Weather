@@ -7,6 +7,7 @@
 
 import Foundation
 
+//api 변환 extension
 extension Bundle {
     var apiKey: String {
         guard let file = self.path(forResource: "Apikey", ofType: "plist") else { return "" }
