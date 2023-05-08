@@ -25,11 +25,14 @@
                                 <rect key="frame" x="138.33333333333334" y="147" width="116.66666666666666" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="날씨 가져오기"/>
+                                <connections>
+                                    <action selector="tapFetchWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJS-K2-1W0"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i8W-OC-3pE">
                                 <rect key="frame" x="24" y="231.33333333333331" width="345" height="143.33333333333331"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hLk-l3-33l">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hLk-l3-33l">
                                         <rect key="frame" x="151" y="0.0" width="43.333333333333343" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-71-eQL">
@@ -39,7 +42,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnn-a2-O8q">
-                                                <rect key="frame" x="0.0" y="37.999999999999972" width="43.333333333333336" height="24"/>
+                                                <rect key="frame" x="4.3333333333333428" y="37.999999999999972" width="34.666666666666664" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -90,10 +93,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fEJ-w1-G2s" secondAttribute="trailing" constant="24" id="yzG-4E-H9n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="sAd-71-eQL" id="ERG-51-UsL"/>
+                        <outlet property="cityNameTextField" destination="fEJ-w1-G2s" id="ByW-7j-ILp"/>
+                        <outlet property="maxTempLabel" destination="NQu-OM-hsz" id="0MZ-T0-bil"/>
+                        <outlet property="minTempLabel" destination="m9x-Dv-T3S" id="n3g-2W-Sts"/>
+                        <outlet property="tempLabel" destination="phR-ND-7qL" id="Tne-WU-n6i"/>
+                        <outlet property="weatherDescriptionLabel" destination="Lnn-a2-O8q" id="tZ6-JO-UEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="4"/>
+            <point key="canvasLocation" x="260" y="-40"/>
         </scene>
     </scenes>
     <resources>
